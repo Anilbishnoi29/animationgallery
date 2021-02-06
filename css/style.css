@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.galley {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.img-container {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+.img-container img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.8);
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal p {
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.modal .full-img {
+    width: 80%;
+    height: 80%;
+    transition: all 0.5s;
+    transform: scale(0.5);
+}
+
+.full-img.popup {
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.container {
+    width: 1152px;
+    margin: auto;
+    max-width: 100%;
+    padding: 0 15px;
+}
