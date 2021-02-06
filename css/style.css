@@ -8,7 +8,9 @@
 *:after {
     box-sizing: border-box;
 }
-
+body{
+    background:#0d1117;
+}
 .galley {
     margin: 2rem 0;
     display: grid;
